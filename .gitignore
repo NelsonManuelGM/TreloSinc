@@ -1,0 +1,14 @@
+*.pyc
+*.db
+*~
+.*
+
+/env/
+/venv/
+*sqlite*
+
+!.gitignore
+!.travis.yml
+!.isort.cfg
+!.style.yapf
+!.pylintrc
