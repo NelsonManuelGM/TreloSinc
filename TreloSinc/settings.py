@@ -125,3 +125,5 @@ STATIC_URL = '/static/'
 USERNAME = 'nelsongonzalezmartinez'
 API_KEY = '5aea24c0a88520251eaca8894bfd34a4'
 TOKEN = '2977b4ab008673804aaee733355afa54545e5cbecd81d6f869427d99b572cf5c'
+
+TRELLO_URL = 'https://api.trello.com/'
