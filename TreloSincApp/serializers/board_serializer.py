@@ -1,4 +1,4 @@
-"""board serializer module"""
+"""board serializer"""
 from rest_framework.serializers import ModelSerializer
 
 from TreloSincApp.models.board import Board
