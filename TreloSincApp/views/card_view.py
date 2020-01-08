@@ -3,7 +3,7 @@
 from rest_framework.views import APIView
 
 
-class TrelloGetCardView(APIView):
+class CardView(APIView):
     """
     View for manage cards model
     """
