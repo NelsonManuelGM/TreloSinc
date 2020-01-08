@@ -8,8 +8,8 @@ class Board(CoreModel):
     """Board model class"""
 
     id = models.CharField('board id', primary_key=True, max_length=100)
-    name = models.CharField('board name', max_length=30)
-    url = models.URLField('board url')
+    name = models.CharField('board name', max_length=30, blank=True, null=True)
+    url = models.URLField('board url', blank=True, null=True)
 
     fillables = ['id', 'name', 'url']
 
