@@ -19,25 +19,8 @@ class TrelloConnection(CoreService):
         """
         get boards from trello.com
         :param save_board_srv: SaveBoard
-        :return:
+        :return: None
         """
-
-        # TRELLO_BOARD_PATH = TRELLO_URL + \
-        #                     f'1/boards/{1}?key={API_KEY}&token={TOKEN}'
-        # TRELLO_BOARD_PATH = TRELLO_URL + \
-        #                     f'1/boards/{1}'
-        # params = {
-        #     'limit': '2',
-        #     'fields': 'name',
-        #     'members': 'true',
-        #     'member_fields': 'fullName',
-        #     'key': API_KEY,
-        #     'token': TOKEN
-        # }
-
-        # connetion = requests.get(TRELLO_BOARD_PATH, params=params)
-
-        # https://api.trello.com/1/members/me/boards?fields=name,url&key={apiKey}&token={apiToken}
         board_path = settings.TRELLO_URL + '1/members/me/boards'
         params = {
             'fields': 'name,url',
@@ -56,7 +39,7 @@ class TrelloConnection(CoreService):
         get boards from trello.com
         :param save_card_srv: SaveCard
         :param list_board_srv: ListBoard
-        :return:
+        :return: None
         """
         params = {
             'fields': 'name,pos,shortUrl',

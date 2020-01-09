@@ -8,7 +8,7 @@ class SaveCard(CoreService):
     """Class to save card data"""
 
     @staticmethod
-    def execute(data: dict, **kwargs) -> None:
+    def execute(data: list, **kwargs) -> None:
         """Save a card"""
         board_obj = kwargs['board']
         for item in data:
