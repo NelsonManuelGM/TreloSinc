@@ -25,7 +25,7 @@ SECRET_KEY = 'n&v)-fautqum2n7z^&r*j!nxopd*j@7=9npsm7+$9_@ecxye5c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '0.0.0.0',]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'TreloSincApp.apps.TrelosincappConfig',
 ]
 
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'TreloSinc.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'trello_db',
+        'USER': 'trello_db',
+        'PASSWORD': 'trello_db',
+        'HOST': 'trello_sync_db',
+        'PORT': '5432',
     }
 }
 
@@ -120,3 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Trello global vars
+API_KEY = '5aea24c0a88520251eaca8894bfd34a4'
+TOKEN = '2977b4ab008673804aaee733355afa54545e5cbecd81d6f869427d99b572cf5c'
+
+TRELLO_URL = 'https://api.trello.com/'
