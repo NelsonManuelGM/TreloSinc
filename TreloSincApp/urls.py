@@ -10,5 +10,5 @@ from TreloSincApp.views.trello_sinc_view import TrelloSincView
 urlpatterns = [
     path('trello_sinc', TrelloSincView.as_view(), name='trello_sync'),
     path('boards', BoardView.as_view(), name='boards'),
-    path('cards', CardView.as_view(), name='cards')
+    path('cards', CardView.as_view(), name='cards'),
 ]
