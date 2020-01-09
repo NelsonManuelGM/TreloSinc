@@ -1,6 +1,7 @@
 ************
 TreloSinc Demo
 ************
+Django app to synchronize with trello.com
 
 This project use django, django-rest-framework, PostgreSQL and Docker
 
